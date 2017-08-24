@@ -1,4 +1,5 @@
 const {app, Menu, Tray} = require('electron')
+const notify = require('electron-main-notification')
 
 app.dock.hide()
 
@@ -22,3 +23,11 @@ const changeIcon = function() {
   console.log('changing shit')
   tray.setImage('tray_icon_purple.png')
 }
+
+app.on('ready', () => {
+  setInterval(() => {
+    console.log('aye')
+    notify('sup bitch')
+  }, 1000)
+})
+
