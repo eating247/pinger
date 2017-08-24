@@ -1,0 +1,23 @@
+{
+  "name": "pinger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eating247/pinger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eating247/pinger/issues"
+  },
+  "homepage": "https://github.com/eating247/pinger#readme",
+  "devDependencies": {
+    "electron": "^1.7.5"
+  }
+}
