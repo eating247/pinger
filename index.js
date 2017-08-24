@@ -17,17 +17,14 @@ app.on('ready', () => {
   ])
   tray.setToolTip('This is my application.')
   tray.setContextMenu(contextMenu)
+
+  setInterval(() => {
+    console.log('aye')
+    notify('sup', { body: 'lalalalal', silent: true })
+  }, 1000)
 })
 
 const changeIcon = function() {
-  console.log('changing shit')
   tray.setImage('tray_icon_purple.png')
 }
-
-app.on('ready', () => {
-  setInterval(() => {
-    console.log('aye')
-    notify('sup bitch')
-  }, 1000)
-})
 
