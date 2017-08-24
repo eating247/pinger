@@ -1,5 +1,6 @@
 const {app, Menu, Tray} = require('electron')
 const notify = require('electron-main-notification')
+var ping = require('ping');
 
 app.dock.hide()
 
@@ -22,6 +23,11 @@ app.on('ready', () => {
     console.log('aye')
     notify('sup', { body: 'lalalalal', silent: true })
   }, 1000)
+
+    ping.promise.probe('google.com')
+        .then(function (res) {
+            console.log(res);
+        });
 })
 
 const changeIcon = function() {
